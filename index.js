@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
     </head>
     <body>
     <section>
-    <div style="text-align: center; background-color:#353535; color:white;  padding: 5px;"><h1>Student-Mentor Management System</h1></div>
+    <div style="text-align: center; background-color:#353535; color:white;  padding: 5px;"><h1>Student Mentor Management System</h1></div>
     <div>
     
     <div><h2 style="text-align: left; background-color:grey;  padding: 2px; ">Student Endpoints in POSTMAN</h2></div>

@@ -1,19 +1,26 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import connectDB from './Database/db.connect.js';
 import mentRouter from './Routers/mentor.router.js';
 import stuRouter from './Routers/student.router.js';
-
-dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.status(200)
-    .send(`<div style="text-align: center; background-color:purple;  padding: 5px;"><h1>Student-Mentor Management System</h1></div>
+    res.status(200)
+        .send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>student-mentor-management-system</title>
+    </head>
+    <body>
+    <section>
+    <div style="text-align: center; background-color:#353535; color:white;  padding: 5px;"><h1>Student-Mentor Management System</h1></div>
     <div>
     
     <div><h2 style="text-align: left; background-color:grey;  padding: 2px; ">Student Endpoints in POSTMAN</h2></div>
@@ -62,14 +69,19 @@ app.get("/", (req, res) => {
     </li>
 
     </ul> 
-    </div>`);
+    </div>
+
+  Documentation : <button><a style="text-decoration:none; color:#3c4043" target="_blank" href="https://github.com/manojconcept/student-mentor-management-system-ss/blob/main/README.md">Readme</a></button>
+    </section>
+    </body>
+    </html>`);
 });
-app.use('/api/mentor',mentRouter);
-app.use('/api/student',stuRouter);
+app.use('/api/mentor', mentRouter);
+app.use('/api/student', stuRouter);
 connectDB();
 
 const port = process.env.PORT;
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log("App Listening to port :", port);
 })

@@ -11,7 +11,6 @@ The Student-Mentor Management System is designed to facilitate the management of
 4.  Create a `.env` file in the project root and define the MongoDB connection string.
 5.  Start the server: `npm start`
 6.  Access the application at `http://localhost:<port>`
-![connections](Output/Connection Successsful.png)
 
 ## API Endpoints
 
@@ -25,6 +24,7 @@ The Student-Mentor Management System is designed to facilitate the management of
 ![student](Output/Listing_students1.png)
 ![student](Output/Student_Assigned_to_Mentor.png)
 ![student](Output/Student_Info_with_Assigned_Mentor_ID.png)
+
 
 
 ### Mentor Routes
